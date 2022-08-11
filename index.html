@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mohammad Mahdi Sahebi">
+    <link rel="stylesheet" href="style/main.css">
+    <title>Spellout</title>
+  </head>
+<body>
+<div class="container">
+    <div class="row input">
+        <label>Enter number:</label>
+        <input id="number" type="number">
+    </div>
+    <div class="row input">
+        <label>Enter locale:</label>
+        <input id="language" type="text" value="fa" placeholder="Enter your number ">
+    </div>
+    <div class="row result">
+        <span id="result-spellout"></span>
+    </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function spellout(){
+            let request = {"number": $("#number").val(), "language": $("#language").val()};
+            $.ajax({
+                "url": "app.php",
+                "type": "POST",
+                "contentType": "JSON",
+                "data": JSON.stringify(request),
+            }).done(function(data, status) {
+                if (status == "success") {
+                    data = JSON.parse(data);
+                    $('#result-spellout').text(data.spellout);
+                }else{
+                    $('#result-spellout').html('<span style="color: red">Error</span>');
+                }
+            }).fail(function(data, status, error) {
+                $('#result-spellout').html('<span style="color: red">'+error+'</span>');
+            });            
+        }
+        $(function(){
+            $("#number").keyup  (function(){ spellout() });
+            $("#language").keyup(function(){ spellout() });
+        });
+    </script>
+</body>
+</html>

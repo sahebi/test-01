@@ -1,0 +1,63 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "c7b8f97aa417d5796261b19ffb880977",
+    "packages": [
+        {
+            "name": "salarmehr/cosmopolitan",
+            "version": "1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/salarmehr/cosmopolitan.git",
+                "reference": "833edb94219885422c4aa5a4e13e134bd386ce2a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/salarmehr/cosmopolitan/zipball/833edb94219885422c4aa5a4e13e134bd386ce2a",
+                "reference": "833edb94219885422c4aa5a4e13e134bd386ce2a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-intl": "*",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8"
+            },
+            "type": "internationalisation",
+            "autoload": {
+                "psr-4": {
+                    "Salarmehr\\Cosmopolitan\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Reza Salarmehr",
+                    "email": "salarmehr@gmail.com"
+                }
+            ],
+            "description": "Super efficient application localisation",
+            "support": {
+                "issues": "https://github.com/salarmehr/cosmopolitan/issues",
+                "source": "https://github.com/salarmehr/cosmopolitan/tree/1.1"
+            },
+            "time": "2021-07-25T16:38:55+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
+}

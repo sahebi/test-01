@@ -1,0 +1,12 @@
+{
+    "name": "me/number-test",
+    "authors": [
+        {
+            "name": "Mohammad Mahdi Sahebi",
+            "email": "msahebi@gmail.com"
+        }
+    ],
+    "require": {
+        "salarmehr/cosmopolitan": "^1.1"
+    }
+}
